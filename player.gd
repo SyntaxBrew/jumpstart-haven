@@ -21,9 +21,16 @@ func _physics_process(delta: float) -> void:
 		
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or coyote_timer <= COYOTE_TIME):
-		velocity.y = JUMP_VELOCITY
+		
 		if Input.is_key_pressed(KEY_UP):
 			velocity.y = JUMP_VELOCITY * 1.5
+			$Jump.pitch_scale = 1.5
+			$Jump.play(0.12)
+		else:
+			velocity.y = JUMP_VELOCITY
+			$Jump.pitch_scale = 1
+			$Jump.play(0.12)
+			
 		coyote_timer = COYOTE_TIME
 
 	# Get the input direction and handle the movement/deceleration.

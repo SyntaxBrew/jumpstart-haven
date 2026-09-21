@@ -12,3 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_world_boundary_body_entered(body: Node2D) -> void:
 	body.position = $Spawn.position
+	$RestartSound.play()
