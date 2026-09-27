@@ -1,5 +1,7 @@
 A sprout named Sprig spawned, they must reach their destination.
 
+https://friedkernel.itch.io/sprig-time
+
 Controls:
 Left/Right Arrow	Move
 Spacebar	Jump
